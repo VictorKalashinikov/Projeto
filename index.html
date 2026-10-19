@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 60px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Vitoria do time</h2>
+    <h1 id="total">0</h1>
+    <button id="btn">+1 Vitória</button>
+
+    <script src="https://cdn.jsdelivr.net.npm.@supabase/supabase-js@2"></script>
+    <script>
+        const SUPABASE_URL = 'https://emoqqydkkiaxltgiryed.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVtb3FxeWRra2lheGx0Z2lyeWVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0MjgxNTgsImV4cCI6MjEwODAwNDE1OH0.JlCPCeC0EXBgvwVc-tTZIWA6bCbOGga0xY2GZM7lsbI';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        const totaLEL = document.getElementById('total');
+        let qtd = 0;
+    </script>
+</body>
+</html>
