@@ -35,6 +35,21 @@
 
         const totaLEL = document.getElementById('total');
         let qtd = 0;
+
+        // Busca valor inicial salvo no banco
+        supabase.from('placar').select('vitorias').eq('id', 1).single().then(({data}) => {
+            if (data) {
+                qtd = data.vitorias
+                totalEl.textContent = qtd
+            }
+        })
+
+        // Soma 1 no clique e atualiza o Supabase
+        document.getElementById('btn').onclick = async () => {
+            qtd++
+            totaLEL.textContent = qtd
+            await supabase.from('placar').update({vitorias: qtd}).eq('id', 1)
+        }
     </script>
 </body>
 </html>
